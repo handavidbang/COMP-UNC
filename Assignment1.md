@@ -32,8 +32,9 @@ This should create three packages called a1novice, a1adept, and a1jedi. Each sho
 #A1 Novice
 
 This program reads in data that represents COMP 401 grade components for a set of students and computes the letter grade that they should receive. The first line of input will be an integer greater than 0 indicating the number of students in the class. Following this will be one line of input for each student in the following form:
-
+```
 First_Name Last_Name Assignment_Grade Recitation_Grade Midterm_1 Midterm_2 Final_Exam
+```
 
 First_Name and Last_Name are single word tokens that represent the first and last name of a student. All of the other entries on the line will be double values between 0.0 and 4.0.
 
@@ -53,10 +54,12 @@ WA >= 3.85	A
 WA < 0.85	F
 For each student, you should print one line of output in the following form:
 
+```
 F. Last_Name Grade
+```
 
 Where F. represents the first letter initial of the first name for the student. For example, if the input to your program was this:
-
+```
 3
 Carrie Brownstein 3.5 4.0 3.2 3.7 3.5
 Corin Tucker 3.8 3.8 3.1 2.5 3.6
@@ -67,14 +70,15 @@ Your program should produce the following output:
 C. Brownstein A-
 C. Tucker B+
 J. Weiss C
-
+```
 #A1 Adept
 
 For this program, the input again represents a COMP 401 gradebook and you will calculate grades, but the format of the input is a bit different and you will have to calculate the homework and recitation components from raw scores.
 
 The first line of input will be an integer greater than 0 that indicates the total number of assignments in the course. The next line of input will have a list of integers that indicate the total number of points each assignment is worth. Following this, will be a line with an integer greater than 0 indicating the number of students in the class followed by a line for each student in the following form:
-
+```
 First_Name Last_Name #_of_Recitations A1_Points ... AN_Points Midterm_1 Midterm_2 Final_Exam
+```
 The #_of_Recitations entry will be an integer between 0 and 15 indicating the number of recitations that the student attended. The entries A1_Points ... AN_Points will be double values that indicate the number of points the student received for each assignment. Remember that you do not need to validate these values and can assume that the value given will be in the range from 0 to the maximum number of points for the assignment as indicated at the beginning of the input. The Midterm_1, Midterm_2, and Final_Exam entries will be between 0.0 and 4.0 as before.
 
 To calculate a student's grade, you will need to first calculate the recitation and assignment components on a 4.0 scale and then calculate the weighted average of the recitation, assignment, midterm, final components as you did in A1 Novice.
@@ -90,7 +94,7 @@ Percentage	4.0 Scale
 A percentage that is in between these points should be interpolated linearly. For example, 85% should be mapped to 3.0 and similarly 55% would be mapped to 0.75.
 
 Your program should produce output in the same form as before in A1 Novice.
-
+```
 Example input:
 
 5
@@ -99,13 +103,13 @@ Example input:
 Carrie Brownstein 10 5 7 8.5 10 21 3.2 2.7 3.4
 Corin Tucker 15 0 10 10 8 20 2.2 2.8 3.5
 Janet Weiss 12 4 9 9.5 7.5 22.5 3.8 3.5 3.6
-
+```
 Corresponding output:
-
+```
 C. Brownstein B
 C. Tucker B
 J. Weiss B+
-
+```
 #A1 Jedi
 
 For this final program, the input will be in the same format as A1 Adept except that the midterm and final exam scores will be given as raw integer scores. This means you will have to convert those raw scores into a 4.0 scale grade by calculating the appropriate exam curve.
@@ -132,7 +136,7 @@ Again, in between values should be interpolated linearly.
 For output, instead of printing the name and grade of each student, print out the number of students that received each letter grade as per the example below.
 
 Example input:
-
+```
 5
 5 10 10 10 25
 5
@@ -141,9 +145,9 @@ Corin Tucker 15 0 10 10 8 20 80 77 90
 Janet Weiss 12 4 9 9.5 7.5 22.5 64 76 50
 Polly Perfect 15 5 10 10 10 25 90 100 100
 Frank Failure 5 5 5 5 5 5 40 50 50
-
+```
 Example output:
-
+```
 A : 1
 A-: 0
 B+: 0
@@ -155,6 +159,7 @@ C-: 0
 D+: 0
 D : 0
 F : 1
+```
 ##Hints
 
 Novice and Adept can be done without using arrays and by simply producing the output for each student as your read in the data for each student within a for loop.
