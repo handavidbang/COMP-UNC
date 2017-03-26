@@ -1,11 +1,11 @@
 COMP 401, Spring 2017
 
-#Assignment 6
-##Due: Wednesday, March 22nd, 11:59:59 PM
-##Due: Sunday, March 26th, 11:59:59 PM
+# Assignment 6
+## Due: Wednesday, March 22nd, 11:59:59 PM
+## Due: Sunday, March 26th, 11:59:59 PM
 In this assignment, you will create an abstraction that represents a moving belt in our sushi restaurant. A belt object is created with a fixed number of positions. Plate objects can be placed on and removed from the belt. There will also be a method to retrieve a plate object (if present) from a particular position without removing it from the belt. The belt object can be told to "rotate" which means that a plate at position p will now be located at position p+1. The belt is circular, so when the belt rotates, a plate object at position size-1 (where size is the length of the belt) can subsequently be found at position 0. This assignment will also require you to implement the Iterator design pattern in several different and interesting ways. Details are below.
 
-##Setup
+## Setup
 
 Create an Eclipse project called "Assignment6".
 
@@ -14,7 +14,7 @@ Download and import the following JAR file:
 Link to A6 Setup JAR File
 You should now have a package in your project called comp401.sushi. This package contains a model solution for A4 Adept and the A5 extra credit assignments. If you prefer, you can discard this code and use your own solutions as long as all of the interfaces and classes are appropriately defined and implemented.
 
-#Novice
+# Novice
 
 Create a package called a6novice. In this package you will create the following two classes:
 
@@ -107,7 +107,7 @@ public void rotate()
 This "rotates" the belt such that a Plate object set at position p before the rotate method, is now found at position p+1 after the rotate method. Note that while one way to do this is to actually move the plates on the belt to their new locations, there is a much more efficient solution that does not require moving the plate objects at all. Either approach is fine and if you aren't sure how you would do it without moving the plates, I would suggest first doing it that way, get it working and turned in, and then seeing if you can figure out the more sophisticated and efficient way that does not require actually moving the plates.
 NOTE: the rotate functionality is not part of or related to the iterator/iterable functionality. In fact, calling rotate on a belt object could cause an existing belt iterator to skip plates.
 
-#Jedi
+Jedi
 
 Make a copy of your a6adept package and rename it a6jedi and add the following features:
 
@@ -130,7 +130,6 @@ Also overload the iterator and iteratorFromPosition methods in your Belt class s
 Turning In The Assignment
 
 Upload to the autograder as a single JAR file.
-
 Grading
 
 The assignment is worth a total of 15 points as follows:
