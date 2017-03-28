@@ -1,11 +1,11 @@
 COMP 401, Spring 2017
-#Assignment 7
-##Due: Wednesday, April 5th, 11:59:59 PM
+# Assignment 7
+## Due: Wednesday, April 5th, 11:59:59 PM
 In this assignment, you will employ the Observer/Observable pattern while modifying our Belt class. This assignment only has an Adept and Jedi part (no Novice for this one). In the Adept part, you will make Belt a subclass of java.util.Observable. Belt will inform registered Observer objects whenever a plate is added or removed to the belt. You will also create observer classes that keep track of the number of plates of any given color on the belt and keep track of how much profit is associated with plates on the belt.
 
 In the Jedi part, you will apply the pattern again, but this time in a customized manner. You will modify Belt to keep track of Customer objects that are observing plates at a particular position on the belt. Whenever a belt rotates, for each position on the belt, if a Customer object is observing that position and there is now a Plate object at that position after the rotation, the Customer object will be informed of the plate via a method specified in the Customer interface definition. Only one customer can be observing any given position and a particular customer can only observe one particular position at a time. In other words, the same Customer object can not be registered as an observer for two different positions on the belt at the same time. Further details are below.
 
-##Setup
+## Setup
 
 Create a new project.
 
@@ -47,7 +47,7 @@ public double getTotalBeltProfit()
 public double getAvergaeBeltProfit()
 The method getTotalBeltProfit returns the sum of all profit for all plates currently on the belt and the method getAverageBeltProfit returns the average profit per plate currently on the belt. If there are no plates on the belt, getAverageBeltProfit should return 0.0.
 
-#Jedi
+# Jedi
 
 Make a copy of your a7adept package and rename it a7jedi.
 
@@ -67,7 +67,7 @@ The unregisterCustomerAtPosition should unregister the Customer at the specified
 For both of the above methods, the value of position should appropriately handle negative values and values larger than the size of the belt in the same way as when placing plates.
 
 Modify Belt futher so that after a rotation occurs, the belt notifies all registered customers if there is now a plate at the customer's position by calling the Customer object's observePlateOnBelt method with the appropriate values as parameters. The value of position should be normalized between 0 and the size of the belt minus one.
-Grading
+# Grading
 
 The assignment is worth a total of 15 points as follows:
 
